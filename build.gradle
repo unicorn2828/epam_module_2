@@ -1,0 +1,21 @@
+subprojects {
+    apply plugin: 'java'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        compileOnly "org.projectlombok:lombok:${lombokVersion}"
+        annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+        implementation "org.glassfish.jaxb:jaxb-runtime:${jaxbVersion}"
+        implementation "org.modelmapper:modelmapper:${modelmapperVersion}"
+        implementation "org.springframework:spring-context:${springVersion}"
+        implementation "javax.annotation:javax.annotation-api:${annotationApiVersion}"
+        implementation "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+        implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+        implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonVersion}"
+    }
+}
+allprojects {
+    group 'com.epam'
+    version '1.0-SNAPSHOT'
+}
